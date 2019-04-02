@@ -1,0 +1,5 @@
+credentials.py
+logs.txt
+node_modules
+.idea/**
+**/__pychache__/**

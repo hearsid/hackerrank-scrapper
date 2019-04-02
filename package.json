@@ -1,0 +1,14 @@
+{
+  "name": "hackerrank-scrapper",
+  "version": "1.0.0",
+  "description": "This repo contains: 1. Code to scrap hackerrank to get your submitted solutions 2. Submissions I have submitted on hackerrank for quick revision for myself",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-notifier": "^5.4.0"
+  }
+}
