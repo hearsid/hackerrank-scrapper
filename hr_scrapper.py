@@ -2,6 +2,7 @@ import os
 from util import get_file_extension
 from urls_service import UrlService
 from models import get_code_result_model
+from constants import BASE_DIR
 
 class HR_Scrapper:
 
@@ -36,8 +37,9 @@ class HR_Scrapper:
                  self.create_code_file(track, sub_domain, chal_slug, code, ext)
 
     def create_code_file(self, track, sub_domain, filename, code, ext ) -> None:
-        dir = '../hackerrank_submissions/'+self.PREFIX+track+"/"+sub_domain+"/"
-        file_path = dir+ filename + ext
+        dir = os.path.join(BASE_DIR,self.PREFIX+track,sub_domain)
+        file_path = os.path.join(dir,filename+ext)
+
         if not os.path.exists(dir): #os.path.isdir(dir):
                 os.makedirs(dir)
                 if not os.path.isfile(file_path):
