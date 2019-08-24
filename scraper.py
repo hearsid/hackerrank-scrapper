@@ -15,9 +15,10 @@ threads = []
 
 for i in TRACKS:
     try:
-        t1 = threading.Thread(target=hr_scrap.get_track, args=(i,))
-        t1.start()
-        #hr_scrap.get_track(i)
+        # commenting threading for now as error handling has become difficult with it
+        # t1 = threading.Thread(target=hr_scrap.get_track, args=(i,))
+        # t1.start()
+        hr_scrap.get_track(i)
     except Exception as e:
         print('Something went wrong::', str(e))
         logging.warning(e)
@@ -27,4 +28,4 @@ for i in TRACKS:
         print("Http Error:", errh)
         pass
 
-call(["node", "notify.js"])
+# call(["node", "notify.js"])
