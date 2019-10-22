@@ -1,5 +1,6 @@
 credentials.py
 logs.txt
 node_modules
+*.lock
 .idea/**
-**/__pychache__/**
+**/__pycache__/**

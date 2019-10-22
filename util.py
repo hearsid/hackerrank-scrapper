@@ -9,6 +9,8 @@ def get_file_extension(track,lang):
         'csharp': '.cs',
         'javascript': '.js',
         'c': '.c',
+        'cpp14':'.cpp',
+        'cpp':'.cpp',
         'sql': '.sql',
         'mysql': '.sql',
         'oracle': '.sql'
