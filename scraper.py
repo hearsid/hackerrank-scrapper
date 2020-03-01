@@ -21,6 +21,8 @@ for i in TRACKS:
         hr_scrap.get_track(i)
     except Exception as e:
         print('Something went wrong::', str(e))
+        if type(e).__name__ is 'JSONDecodeError' and e.doc:
+            print('Error (in HTML):', e.doc)
         logging.warning(e)
         pass
 
